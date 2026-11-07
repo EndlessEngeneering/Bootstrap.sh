@@ -15,7 +15,7 @@ Get a new project up and running in seconds:
 
 ```bash
 # 1. Initialise bootstrap.sh
-curl -sSL https://githubusercontent.com -o bootstrap.sh
+curl -sSL  https://github.com/EndlessEngeneering/Bootstrap.sh -o bootstrap.sh
 chmod +x bootstrap.sh
 sudo mv bootstrap.sh /usr/local/bin/bootstrap
 
