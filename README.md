@@ -4,9 +4,10 @@ A lightweight, **Cargo-inspired package manager and build tool for Bash projects
 
 ## Features
 
-* **Zero-Dependency Bootstrap:** No compilation or complex setups—just run `bootstrap.sh`.
-* **Familiar CLI Workflow:** Includes Cargo-like lifecycle commands such as `new`, `build`, `run`, and `test`.
-* **Isolated Environment:** Handles project dependencies locally without polluting your system paths.
+* **Global CLI Availability:** Install it once to your `PATH` and use it across any project directory.
+* **Familiar CLI Workflow:** Includes Cargo-like lifecycle commands such as `run` and `new`.
+* **Zero-Dependency Setup:** No compilation or heavy language runtimes required—just pure Bash.
+* **Isolated Project Management:** Handles project dependencies locally without polluting your system paths.g your system paths.
 
 ## Quick Start
 
@@ -17,11 +18,13 @@ Get a new project up and running in seconds:
 mkdir my-bash-project && cd my-bash-project
 curl -sSL https://githubusercontent.com -o bootstrap.sh
 
-# 2. Initialise a new project structure
-bash bootstrap.sh new .
+# 2. cd into your project folder
+
+# 3. Initialise a new project structure
+bash bootstrap.sh -create <your-project-name> .
 
 # 3. Build and execute your app
-bash bootstrap.sh run
+bash bootstrap.sh -r
 ```
 
 ## Project Structure
@@ -30,22 +33,18 @@ Your project layout matches standard conventions:
 
 ```text
 my-bash-project/
-├── bootstrap.sh    # The core runner and manager script
-├── App.toml        # Project metadata and configuration
+├── Bootstrap.toml        # Project metadata and configuration
 ├── src/
-│   └── main.sh     # Application entry point
-└── tests/
-    └── test.sh     # Test scripts
+   └── main.sh     # Application entry point
+   └── utils/      # Any other accompaniement scripts go here
 ```
 
 ## Command Reference
 
 Run these commands using your local bootstrapper script:
 
-* **`bash bootstrap.sh new <path>`** – Scaffolds a new project framework.
-* **`bash bootstrap.sh build`** – Compiles, links, or validates source files.
+* **`bash bootstrap.sh new <project-name>`** – Scaffolds a new project framework.
 * **`bash bootstrap.sh run`** – Builds and runs the main script entry point.
-* **`bash bootstrap.sh test`** – Executes unit or integration tests.
 
 ## License
 
