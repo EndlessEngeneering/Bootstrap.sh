@@ -14,18 +14,19 @@ A lightweight, **Cargo-inspired package manager and build tool for Bash projects
 Get a new project up and running in seconds:
 
 ```bash
-# 1. Download the bootstrapper into a new directory
-mkdir my-bash-project && cd my-bash-project
+# 1. Initialise bootstrap.sh
 curl -sSL https://githubusercontent.com -o bootstrap.sh
+chmod +x bootstrap.sh
+sudo mv bootstrap.sh /usr/local/bin/bootstrap
 
-# 2. cd into your project folder
+# 2. CD into your project folder
 cd <Your-project-directory>
 
 # 3. Initialise a new project structure
-bash bootstrap.sh -create <your-project-name> .
+bootstrap new <your-project-name> .
 
 # 3. Build and execute your app
-bash bootstrap.sh -r
+bootstrap run
 ```
 
 ## Project Structure
