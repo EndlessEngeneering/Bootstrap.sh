@@ -19,6 +19,7 @@ mkdir my-bash-project && cd my-bash-project
 curl -sSL https://githubusercontent.com -o bootstrap.sh
 
 # 2. cd into your project folder
+cd <Your-project-directory>
 
 # 3. Initialise a new project structure
 bash bootstrap.sh -create <your-project-name> .
