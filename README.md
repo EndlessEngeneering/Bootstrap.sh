@@ -1,4 +1,4 @@
-# cargo-bash
+# bootstrap.sh
 
 A lightweight, **Cargo-inspired package manager and build tool for Bash projects**, entirely driven by a single `bootstrap.sh` script.
 
@@ -15,7 +15,7 @@ Get a new project up and running in seconds:
 
 ```bash
 # 1. Initialise bootstrap.sh
-curl -O https://github.com/EndlessEngeneering/Bootstrap.sh/blob/main/bootstrap.sh
+git clone https://github.com/EndlessEngeneering/Bootstrap.sh
 chmod +x bootstrap.sh
 sudo mv bootstrap.sh /usr/local/bin/bootstrap
 
